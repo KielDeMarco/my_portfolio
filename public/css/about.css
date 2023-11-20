@@ -1,0 +1,240 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: visible;
+  background-color: whitesmoke;
+  flex-direction: column;
+  position: relative
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(41, 37, 37);
+  z-index: 1000;
+}
+
+footer {
+  margin-top: auto;
+}
+
+ul.header {
+  list-style: none;
+  background-color: rgb(41, 37, 37);
+}
+
+li {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li ul.dropdown {
+  width: 100%;
+  background: rgb(41, 37, 37);
+  opacity: 1;
+  position: absolute;
+  z-index: 999;
+  display: none;
+  overflow: visible;
+}
+
+ul:hover li:hover ul.dropdown {
+  display: block;
+  overflow: visible;
+  color: dodgerblue;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.emblem{
+  text-indent: 40px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.navbar {
+  width: 95%;
+  margin: auto;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding{
+  font-size: 2rem;
+}
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+.nav-link:hover{
+  color: dodgerblue;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+  background-color: white;
+}
+
+.container {
+  width: 1140%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 30px;
+  background-color: rgb(41, 37, 37);
+}
+
+.footer-text-left {
+  font-size:20px;
+  padding-left:40px;
+  float:left;
+  word-spacing:20px;
+}
+
+a.menu:hover {
+  color: dodgerblue;
+  font-size:18px;
+}
+.follow {
+  color: white;
+  display:inline;
+}
+
+.footer-content-right {
+  padding-right:40px;
+  word-spacing:5px;
+  float:right;
+}
+
+i{
+  font-size: 23px;
+}
+i:hover {
+  color: dodgerblue;
+}
+
+.icon-style {
+  height:40px;
+  margin-left:20px;
+  margin-top:5px;
+}
+
+.icon-style:hover {
+  color:dodgerblue;
+  padding:5px;
+}
+
+.content {
+  position: relative;
+  top: 100px;
+  bottom: 100px;
+  overflow: auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.summary {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 70px;
+
+}
+
+.info {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  top: 200px;
+}
+
+.locations {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-indent: 30px;
+  font-size: 40px;
+  top: 200px;
+  gap: 60px;
+
+}
+
+.locations:hover {
+color:dodgerblue;
+}
+
+@media(max-width:768px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .nav-menu {
+        position:fixed;
+        Left: -100%;
+        top: 70px;
+        gap: 0px;
+        flex-direction: column;
+        background-color: rgb(41, 37, 37);
+        width: 100%;
+        text-align: center;
+        transition: 0.3%;
+      }
+
+      .nav-item {
+        margin: 16px 0;
+
+      }
+
+      .nav-menu.active{
+        Left: 0;
+      }
+}
